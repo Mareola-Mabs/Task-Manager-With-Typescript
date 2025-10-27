@@ -67,3 +67,5 @@ function renderTask(task: Task):void{
     taskElement.textContent = task.description
     taskListElement.appendChild(taskElement)
 }
+
+alert("ok")
