@@ -47,9 +47,10 @@ taskForm.addEventListener('submit', (event)=>{
         addTask(task)
 
         // Render tasks
+        renderTask(task)
 
         // Update local storage
-
+        
 
         return formInput.value = ''
     }
@@ -59,4 +60,10 @@ taskForm.addEventListener('submit', (event)=>{
 function addTask(task: Task): void{
     tasks.push(task)
     console.log(tasks)
+}
+
+function renderTask(task: Task):void{
+    const taskElement = document.createElement('li')
+    taskElement.textContent = task.description
+    taskListElement.appendChild(taskElement)
 }
